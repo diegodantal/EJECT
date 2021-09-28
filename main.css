@@ -1,16 +1,79 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
+  max-width: 960px;
+  height: max-content;
+  margin: auto;
 }
 
-header {
-  padding: 20px 0;
+h1{
+  color: #ffffff;
 }
 
-header .row,
-footer .row {
+.menu{
+  color:#ffffff;
+  display: inline;
+}
+
+.conteudo {
+  display: inline;
+  padding: 10px;
+}
+
+.container1{
+  padding: 20px 10px;
+  background-image: url('https://startupi.com.br/wp-content/uploads/2019/06/hub.jpg');
+  background-size: cover;
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.cards{
+    grid-gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    width: auto;
+    
+}
+
+.card {
+  float: left;
+  width:  400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+a:link, a:visited {
+  color: white;
+  background-color:black;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 255, 0, 0.911);
+  text-decoration: none;
+  text-align: center;
+  font: 14px Arial, sans-serif;
+}
+a:hover, a:active {
+  background-color: #9c6ae1;
+  border-color: #7443b6;
+}
+
+header .row {
+  display: flex;
+  align-items:flex-end;
+}
+
+.footer1 {
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-end;
+}
+
+.personal_pic{
+  background-color: #000000;
+  padding: 10px;
 }
 
 header h1 {
@@ -38,61 +101,20 @@ header p {
   text-shadow: 0.25px 0.25px 0.25px #000000;
 }
 
-.jumbotron h2 {
-  font-size: 60px;
-  font-weight: 700;
-  margin: 0;
-  color: #fff;
-}
-
-.jumbotron h3 {
-  margin: 0 0 20px;
-  color: #fff;
-}
-
-section .row img {
-  margin: 0 0 30px;
-  width: 100%;
-}
-
-.col-md-6 {
-  margin: 0 0 30px;
-}
-
-.btn.btn-primary {
-  border-radius: 2px;
-  border: 0px;
-  color: #fbd1d5;
-  text-shadow: none;
-  background-color: #ffffff;
-}
-
-.btn.btn-primary:hover {
-  color: #ffffff;
-  background-color: #fbd1d5;
-}
-
-.btn-secondary {
-  background-color: #E8DFE0;
-  color: #ffffff;
-  margin: 0 0 30px;
-}
-
-footer {
-  font-size: 12px;
-  padding: 20px 0;
-}
-
-footer .col-sm-8 {
+.social_network{
   display: flex;
-  justify-content: flex-end;
 }
 
-footer ul {
-  list-style: none;
+.icons {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
 }
 
-footer li img {
-  width: 32px;
-  height: 32px;
+.twitter{
+  display: flex;
+  width: 34px;
+  height: 34px;
+  padding: 5px;
 }
