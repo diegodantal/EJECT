@@ -17,7 +17,8 @@ h1{
 
 .conteudo {
   display: inline;
-  padding: 10px;
+  
+  
 }
 
 .container1{
@@ -34,8 +35,7 @@ h1{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: space-between;
-    width: auto;
-    
+    width: auto;    
 }
 
 .card {
@@ -54,6 +54,7 @@ a:link, a:visited {
   text-decoration: none;
   text-align: center;
   font: 14px Arial, sans-serif;
+ 
 }
 a:hover, a:active {
   background-color: #9c6ae1;
@@ -76,9 +77,15 @@ header .row {
   padding: 10px;
 }
 
+.personal_img{
+  position: relative;
+  left: 30px;
+}
+
 header h1 {
-  font-weight: 700;
+  font-weight: 600;
   margin: 0;
+  padding: 5px;
 }
 
 header nav {
@@ -116,5 +123,7 @@ header p {
   display: flex;
   width: 34px;
   height: 34px;
-  padding: 5px;
+  padding: 6px;
+  align-self: center;
+  
 }
