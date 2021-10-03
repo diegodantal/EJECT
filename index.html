@@ -1,73 +1,70 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Diego Dantas</title>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Requisição Javascript</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
+
 <body>
-<header>
-  <div class= "container1">
-    <div class="row">
-      <nav class="menu">
-        <a class="conteudo" href="#" role="button">Interesses</a>
-        <a class="conteudo" href="#" role="button">Portfolio</a>
-        <a class="conteudo" href="#" role="button">Contato</a>
-      </nav> 
+    
+  <form id="myForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
     </div>
-    <div class="personal_pic">
-      <h1>Diego Dantas</h1>
-      <img src="Foto_Diego_2018.jpg" height="200" width="150" class="personal_img"/>
-    </div>
-  </div>
-</header>
-<section class="container">
-  <div class="cards">
-    <div>
-      <figure>
-        <p>Math</p>
-        <img class="card" src="https://i0.wp.com/calmatters.org/wp-content/uploads/2021/08/math-curriculum.jpg"/>
-      </figure>
-    </div>
-    <div >
-      <figure>
-        <p>Science</p>
-        <img class="card" src="https://image.freepik.com/free-vector/hand-drawn-science-education-background_23-2148499325.jpg"/>
-      </figure>
-    </div>
-    <div>
-      <figure>
-        <p>Engineering</p>
-        <img class="card" src="https://www.nesfircroft.com/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBem1CQkE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--10e07b6f9aa62c88d4b28278c188db67d45cf07d/Engineer's%20Mindset.jpg"/>
-      </figure>
-    </div>
-    <div>
-      <figure>
-        <p>Code</p>
-        <img class="card" src="https://braziljournal.s3.amazonaws.com/covers/a4dbc2a7-ebd4-35ea-c76b-32f703b972a9.jpg"/>
-      </figure>
-    </div>
-  </div>
-</section>
-  <footer>
-    <div class="footer1">
-      <div>
-      <p>&copy; 2021 Copyright</p>
-      </div>
-      <div>
-        <ul class="social_network">
-          <li class="twitter">
-            <img src="twitter_icon.png">
-          </li>
-          <li class="icons"> 
-            <img src="facebook_icon.png">
-          </li>
-          <li class="icons"> 
-            <img src="instagram_icon.png">
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+ <script>
+window.addEventListener( "load", function () {
+  function sendData() {
+    const XHR = new XMLHttpRequest();
+
+    // Bind the FormData object and the form element
+    const FD = new FormData( form );
+
+    console.log(FD);
+    // Define what happens on successful data submission
+    XHR.addEventListener( "load", function(event) {
+      alert( event.target.responseText );
+    } );
+
+    // Define what happens in case of error
+    XHR.addEventListener( "error", function( event ) {
+      alert( 'Oops! Something went wrong.' );
+    } );
+
+    // Set up our request
+    XHR.open( "POST", "https://0gu4q3l2o0.execute-api.sa-east-1.amazonaws.com/default/curso-incubatech" );
+
+    // The data sent is what the user provided in the form
+    XHR.send( '{"email": "felipe.osgama@gmail.com","nome": "Felipe Gama"}' );
+
+  }
+
+  // Access the form element...
+  const form = document.getElementById( "myForm" );
+
+  // ...and take over its submit event.
+  form.addEventListener( "submit", function ( event ) {
+    event.preventDefault();
+
+    sendData();
+   
+  } );
+} );
+
+ </script>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/navegacao.js"></script>
 </body>
+
 </html>
